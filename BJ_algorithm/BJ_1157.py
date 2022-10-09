@@ -19,3 +19,19 @@ if c > 1:  #최대값이 하나보다 많을 때 '?'출력
     print('?') 
 else:
     print(k) #최대값이 하나일 때 key값(알파벳) 출력
+
+
+# 추후에 수정한 코드
+s = input().upper()  
+a = {}
+for x in s:
+    a[x] = a.get(x, 0)+1
+        
+nums = list(a.values())
+for key, value in a.items():
+    if value == max(nums):
+        k = key
+if nums.count(max(nums)) > 1 :
+    print('?')
+else:
+    print(k)
